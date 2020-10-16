@@ -5,6 +5,7 @@ Using git, a set of changes to a set of files is maintained in a *repository*.
 - [Creating your first repository](#creating-your-first-repository)
 - [Commit your first file to the repository](#commit-your-first-file-to-the-repository)
 - [Commit your first edits to the repository](#commit-your-first-edits-to-the-repository)
+- [Create your first branch in the repository](#create-your-first-branch-in-the-repository)
 
 ## Creating your first repository
 
@@ -63,16 +64,33 @@ There are some variations on the add command that are worth noting.
 
 ## Commit your first edits to the repository
 
-7. Add a joke to the file by executing `echo "Why don't eggs tell jokes? They'd crack each other up." > food-jokes.txt`.
+1. Add a joke to the file by executing `echo "Why don't eggs tell jokes? They'd crack each other up." > food-jokes.txt`.
     - This will add the joke to the text file, using bash commands.
 
-8. We can look at the contents of the file by executing `cat food-jokes.txt`.
+2. We can look at the contents of the file by executing `cat food-jokes.txt`.
     - Once again, nothing to do with git. This is just s simple way to look at the file from the command line without opening it in a text editor.
 
-9. Check the status again by executing `git status`.
+3. Check the status again by executing `git status`.
     - You will see a status message for the repository indicating that the file **food-jokes.txt** is a _modified_ file.
 
-10. Stage and commit the changes using a single command by executing `git commit -am "adding a egg joke to food-jokes"`.
+4. Stage and commit the changes using a single command by executing `git commit -am "adding a egg joke to food-jokes"`.
     - This approach is a nice shortcut. Use it in cases where you want to commit _**a**ll_ changes and supply the commit _**m**essage_ in one command.
         
 ![Commit changes](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-5.52.36-AM.png)
+
+
+## Create your first branch in the repository
+
+Before we jump into creating branches, let's step back and discuss what a branch is and why you might want to use one. Imagine if you will, that the commits you have made so far into the repository as a liniar set of of changes through time.
+
+![Commits](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/main.png)
+
+We call this the **main** branch. Think of a branch as a tag that is added to a specific commit in the liniar set if changes.
+
+![Main Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/main-tag.png)
+
+**Consider this scenario:** You want to work on a new joke to add to the food-jokes.txt file. But you are not sure if the joke is going to work, or you want to try some variations and see how they feel. At some point you are going to decide if this new joke is worth keeping around. You do not want the **food-jokes.txt** file in the **main** branch to be modified until you are certain the new joke is perfect.
+
+To handle this in git, we create a new branch to perform the work of creating the new joke. Creating a branch simply adds a new tag to the set of commits.
+
+![New Joke Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/new-joke-branch.png)
