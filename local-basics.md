@@ -151,7 +151,17 @@ This time the new-joke branch has the asterisk indicating it is the active worki
 
 6. Add a new joke to the food-jokes.txt file by executing the command `echo "Did you hear the rumor about butter? Well, I'm not going to spread it\!" >> food-jokes.txt`
 
-7. Verify the new joke is in the food-jokes.txt file, `cat food-jokes.txt`.
+7. Verify the new joke is in the _food-jokes.txt_ file, `cat food-jokes.txt`.
     - You will see both jokes are contained in the file.
     
 ![Creating New Joke Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-8.45.00-AM.png)
+
+8. Check the status of the repository by executing the command `git status`.
+    - You will see a status message for the repository indicating that the file **food-jokes.txt** is a _modified_ file.
+
+Notice that the status message also tells us what branch is currently active.
+
+9. Stage and commit the new joke by executing the command `git commit -am "adding a butter joke"`.
+
+10. Once again check the status, `git status`.
+    - You will see a status message indicating that there are no changes or new files detected in the dadjokes directory.
