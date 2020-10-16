@@ -57,6 +57,8 @@ There are some variations on the add command that are worth noting.
 
 ![clean status](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-15-at-6.01.23-PM.png)
 
+## Commit your first edits to the repository
+
 7. Add a joke to the file by executing `echo "Why don't eggs tell jokes? They'd crack each other up." > food-jokes.txt`.
     - This will add the joke to the text file, using bash commands.
 
