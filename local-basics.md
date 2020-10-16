@@ -84,13 +84,15 @@ There are some variations on the add command that are worth noting.
 
 Before we jump into creating branches, let's step back and discuss what a branch is and why you might want to use one. Imagine if you will, that the commits you have made so far into the repository as a liniar set of of changes through time.
 
-![Commits](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/main.png)
+![Commits](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/
 
-We call this the **main** branch. Think of a branch as a tag that is added to a specific commit in the liniar set of changes.
+.png)
 
-![Main Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/main-tag.png)
+We call this the **master** branch. Think of a branch as a tag that is added to a specific commit in the liniar set of changes.
 
-**Consider this scenario:** You want to work on a new joke to add to the food-jokes.txt file. But you are not sure if the joke is going to work, or you want to try some variations and see how they feel. At some point you are going to decide if this new joke is worth keeping around. You do not want the **food-jokes.txt** file in the **main** branch to be modified until you are certain the new joke is perfect.
+![Master Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/main-tag.png)
+
+**Consider this scenario:** You want to work on a new joke to add to the food-jokes.txt file. But you are not sure if the joke is going to work, or you want to try some variations and see how they feel. At some point you are going to decide if this new joke is worth keeping around. You do not want the **food-jokes.txt** file in the **master** branch to be modified until you are certain the new joke is perfect.
 
 To handle this in git, we create a new branch to perform the work of creating the new joke. Creating a branch simply adds a new tag to the set of commits.
 
@@ -100,25 +102,25 @@ We can now commit new changes to the new-joke branch.
 
 ![New Joke Butter](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/new-joke-butter.png)
 
-Notice that the butter joke commit simply continues the liniar set of changes but the **new-joke** branch points to the _butter joke commit_ and the **main** branch points at the _egg joke commit_.
+Notice that the butter joke commit simply continues the liniar set of changes but the **new-joke** branch points to the _butter joke commit_ and the **master** branch points at the _egg joke commit_.
 
-Once we are satisfied with the butter joke, we can **merge** the _new-joke branch_ into the _main branch_.
+Once we are satisfied with the butter joke, we can **merge** the _new-joke branch_ into the _master branch_.
 
-![Merge New Joke to Main](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/merge-new-joke-to-main.png)
+![Merge New Joke to Master](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/merge-new-joke-to-main.png)
 
-Notice here the _main branch_ tag is moved forward in the linear set of changes to the same place as the _new-joke branch_.
+Notice here the _master branch_ tag is moved forward in the linear set of changes to the same place as the _new-joke branch_.
 
 **Question:** Why are they called branches instead of tags or pointers?
 
 **Consider this scenario:** While working on the butter joke in the _new-joke branch_, a bug report comes in saying there is a fatal flaw in the egg joke.
 
-Using git, you can switch to the _main branch_ and correct the problem by adding a commit fixing it to the _main branch_.
+Using git, you can switch to the _master branch_ and correct the problem by adding a commit fixing it to the _master branch_.
 
-![New Commit to Main Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/new-commit-main-branch-1.png)
+![New Commit to Master Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/new-commit-main-branch-1.png)
 
 Here we have introduced a divergence in the liniar set of changes. This divergence consists of two commits with a common ancestor commit. And our branches point to the head of each divergent commit.
 
-Now when we merge the _new-joke branch_ into the _main branch_, we create a new merge commit to the _main branch_ tag.
+Now when we merge the _new-joke branch_ into the _master branch_, we create a new merge commit to the _master branch_ tag.
 
 ![Merge](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/merge-new-joke-to-main-1.png)
 
@@ -133,14 +135,14 @@ Now let's put that theory into practice.
 1. List the branches that currently exist in the repository by executing the command `git -P branch`.
     - This will show a list of branches in the repository.
 
-Notice that _main_ is the only branch listed. It has an asterisk to the left of it to show that this is the current working branch.
+Notice that _master_ is the only branch listed. It has an asterisk to the left of it to show that this is the current working branch.
 
 2. Create a new branch by executing the command `git branch new-joke`.
 
 3. List the branches again by executing `git -P branch`.
     - You will see the list of branches again showing two branches.
 
-Notice that the _main_ branch is still the current working branch, but we have successfully created a _new-joke_ branch.
+Notice that the _master_ branch is still the current working branch, but we have successfully created a _new-joke_ branch.
 
 4. Switch to the new-joke branch by executing the command `git checkout new-joke`.
 
@@ -168,7 +170,7 @@ Notice that the status message also tells us what branch is currently active.
 
 ![Adding Commit to New Joke Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-9.01.02-AM.png)
 
-11. Switch to the _main_ branch, `git checkout main`.
+11. Switch to the _master_ branch, `git checkout master`.
 
 12. Look at the contents of the _food-jokes.txt_ file, `cat food-jokes.txt`
     - You should see the original contents of the file with a single joke.
@@ -182,12 +184,12 @@ The change that adds the butter joke to the _food-jokes.txt_ file only exists in
 
 ![Switching between Branches](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-9.08.33-AM.png)
 
-Now, let's merge the _new-joke_ branch into the _main_ branch.
+Now, let's merge the _new-joke_ branch into the _master_ branch.
 
-15. Switch back to the _main_ branch, `git checkout main`.
+15. Switch back to the _master_ branch, `git checkout master`.
 
-16. Merge the new-joke branch into the main branch, `git merge new-joke  -m "merging butter joke"`
-    - This command will create a new commit that merges the changes from the _new-joke_ branch to the _main_ branch providing an inline commit _**m**essage_.
+16. Merge the new-joke branch into the master branch, `git merge new-joke  -m "merging butter joke"`
+    - This command will create a new commit that merges the changes from the _new-joke_ branch to the _master_ branch providing an inline commit _**m**essage_.
     
 17. Check the content of the _food-jokes.txt_ file, `cat food-jokes.txt`.
     - You will see the file contains the new butter joke.
@@ -197,7 +199,7 @@ Now, let's merge the _new-joke_ branch into the _main_ branch.
 Now that we have successfully merged the _new-joke_ branch, we no longer need it.
 
 18. List the branches again by executing `git -P branch`.
-    - You should see both _main_ and _new-joke_ branches listed with main marked as the currently active branch.
+    - You should see both _master_ and _new-joke_ branches listed with master marked as the currently active branch.
 
 19. Delete the new-joke branch by executing the command `git branch -d new-joke`.
 
