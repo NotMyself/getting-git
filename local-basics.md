@@ -2,6 +2,10 @@
 
 Using git, a set of changes to a set of files is maintained in a *repository*. 
 
+- [Creating your first repository](#creating-your-first-repository)
+- [Commit your first file to the repository](#commit-your-first-file-to-the-repository)
+- [Commit your first edits to the repository](#commit-your-first-edits-to-the-repository)
+
 ## Creating your first repository
 
 It is pretty easy to create a repository using git.
