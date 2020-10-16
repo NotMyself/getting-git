@@ -40,7 +40,7 @@ Making the repository begin tracking a new file is a two step process. First you
 
 This might seem silly at first. Why do I need to stage the file and then commit it? 
 
-Consider this scenario: You have been working on your files for an hour. You have made many non-related changes to many files. You want to be able to commit related changes to the repository in discrete sets. You can stage a subset of files and commit them, then stage another subset of files and commit them. You can even stage specific lines with in a given file, but that is a topic for another day.
+**Consider this scenario:** You have been working on your files for an hour. You have made many non-related changes to many files. You want to be able to commit related changes to the repository in discrete sets. You can stage a subset of files and commit them, then stage another subset of files and commit them. You can even stage specific lines with in a given file, but that is a topic for another day.
 
 There are some variations on the add command that are worth noting.
 
