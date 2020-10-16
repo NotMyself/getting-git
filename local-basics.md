@@ -125,3 +125,33 @@ Now when we merge the _new-joke branch_ into the _main branch_, we reorder the c
 This is commonly refered to as a rebase merge. We took the set of changes from the _new-joke branch_ and applied them to the end of the set of changes in the _main branch_. Making it appear in the linear set of changes in the main branch as a new commit. Now both branch tags are pointing to the same commit. We no longer need the _new-joke branch_ and can delete it.
 
 ![Delete Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/delete-new-joke-branch.png)
+
+## Create your first branch in the repository
+
+Now let's put that theory into practice.
+
+1. List the branches that currently exist in the repository by executing the command `git -P branch`.
+    - This will show a list of branches in the repository.
+
+Notice that _main_ is the only branch listed. It has an asterisk to the left of it to show that this is the current working branch.
+
+2. Create a new branch by executing the command `git branch new-joke`.
+
+3. List the branches again by executing `git -P branch`.
+    - You will see the list of branches again showing two branches.
+
+Notice that the _main_ branch is still the current working branch, but we have successfully created a _new-joke_ branch.
+
+4. Switch to the new-joke branch by executing the command `git checkout new-joke`.
+
+5. List the branches again by executing `git -P branch`.
+    - You will see the list of branches again showing two branches.
+
+This time the new-joke branch has the asterisk indicating it is the active working branch.
+
+6. Add a new joke to the food-jokes.txt file by executing the command `echo "Did you hear the rumor about butter? Well, I'm not going to spread it\!" >> food-jokes.txt`
+
+7. Verify the new joke is in the food-jokes.txt file, `cat food-jokes.txt`.
+    - You will see both jokes are contained in the file.
+    
+![Creating New Joke Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-8.45.00-AM.png)
