@@ -114,17 +114,17 @@ Notice here the _main branch_ tag is moved forward in the linear set of changes 
 
 Using git, you can switch to the _main branch_ and correct the problem by adding a commit fixing it to the _main branch_.
 
-![New Commit to Main Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/new-commit-main-branch.png)
+![New Commit to Main Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/new-commit-main-branch-1.png)
 
 Here we have introduced a divergence in the liniar set of changes. This divergence consists of two commits with a common ancestor commit. And our branches point to the head of each divergent commit.
 
-Now when we merge the _new-joke branch_ into the _main branch_, we reorder the commits to the new _main branch_ tag.
+Now when we merge the _new-joke branch_ into the _main branch_, we create a new merge commit to the _main branch_ tag.
 
-![Rebase Merge](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/rebase-merge.png)
+![Merge](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/merge-new-joke-to-main-1.png)
 
-This is commonly refered to as a rebase merge. We took the set of changes from the _new-joke branch_ and applied them to the end of the set of changes in the _main branch_. Making it appear in the linear set of changes in the main branch as a new commit. Now both branch tags are pointing to the same commit. We no longer need the _new-joke branch_ and can delete it.
+Now both branch tags are pointing to the same commit. We no longer need the _new-joke branch_ and can delete it.
 
-![Delete Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/delete-new-joke-branch.png)
+![Delete Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/delete-new-joke-branch-1.png)
 
 ## Create your first branch in the repository
 
@@ -165,3 +165,25 @@ Notice that the status message also tells us what branch is currently active.
 
 10. Once again check the status, `git status`.
     - You will see a status message indicating that there are no changes or new files detected in the dadjokes directory.
+
+![Adding Commit to New Joke Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-9.01.02-AM.png)
+
+11. Switch to the _main_ branch, `git checkout main`.
+
+12. Look at the contents of the _food-jokes.txt_ file, `cat food-jokes.txt`
+    - You should see the original contents of the file with a single joke.
+
+13. Switch back to the _new-joke_ branch, `git checkout new-joke`.
+
+14. Look at the contents of the _food-jokes.txt_ file again, `cat food-jokes.txt`.
+    - You should see the new butter joke has returned.
+
+The change that adds the butter joke to the _food-jokes.txt_ file only exists in the set of changes in the _new-joke_ branch.
+
+![Switching between Branches](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-9.08.33-AM.png)
+
+Now, let's merge the _new-joke_ branch into the _main_ branch.
+
+15. Switch back to the _main_ branch, `git checkout master`.
+
+16. 
