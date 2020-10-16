@@ -12,11 +12,11 @@ Git is a distributed source control system. That is a mouthful isn't it? But wha
 
 A **source control system** typically is a piece of software that is designed to do pretty much what was just described. But it tracks the changes for you over time so that you do not need to duplicate files over and over on your drive. They also allow you to go back in time to any point in the past to recover a specific version of your files.
 
-A source control system is typically a centralized server that is considered the single point of truth for the current state of your files. A user submits their changes to the source control system and they are made available to other users from there.
+A source control system is historically a centralized server that is considered the single point of truth for the current state of the files. A user submits their changes to the source control system and they are made available to other users from there.
 
-A **distributed source control system** is a kind of source control system breaks the dependance on a centralized server by maintaining all the changes to a given set of files in a cloned instance of the source control system. In this way, you can happily work locally with no connection to any central server and push your changes between cloned instances of the source control system.
+A **distributed source control system** is a kind of source control system that breaks the dependence on a centralized server by maintaining all the changes to a given set of files in a cloned instance of the source control system. In this way, you can happily work locally with no connection to any central server and share your changes between cloned instances of the source control system.
 
-At any given time you can have the source control system on your local machine, hosted by a provider like GitHub or Bitbucket, or even stored on a shared drive on a network. Each of these locations share a common set of historical changes to the files but may not have all the changes at time same time. These changes can be distributed to all as needed.
+At any given time you can have the entire set of changes on your local machine, hosted by a provider like GitHub or Bitbucket, or even stored on a shared drive on a network. Each of these locations share a common set of historical changes to the files but may not have all the changes at time same time. These changes can be distributed to all as needed.
 
 ## Let's get started learning
 
