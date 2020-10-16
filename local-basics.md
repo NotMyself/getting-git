@@ -184,6 +184,24 @@ The change that adds the butter joke to the _food-jokes.txt_ file only exists in
 
 Now, let's merge the _new-joke_ branch into the _main_ branch.
 
-15. Switch back to the _main_ branch, `git checkout master`.
+15. Switch back to the _main_ branch, `git checkout main`.
 
-16. 
+16. Merge the new-joke branch into the main branch, `git merge new-joke  -m "merging butter joke"`
+    - This command will create a new commit that merges the changes from the _new-joke_ branch to the _main_ branch providing an inline commit _**m**essage_.
+    
+17. Check the content of the _food-jokes.txt_ file, `cat food-jokes.txt`.
+    - You will see the file contains the new butter joke.
+    
+![Successfully Merged File](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-9.41.01-AM.png)
+
+Now that we have successfully merged the _new-joke_ branch, we no longer need it.
+
+18. List the branches again by executing `git -P branch`.
+    - You should see both _main_ and _new-joke_ branches listed with main marked as the currently active branch.
+
+19. Delete the new-joke branch by executing the command `git branch -d new-joke`.
+
+20. List the branches again by executing `git -P branch`.
+    - The _new-joke_ branch is gone!
+
+![Delete New Joke Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-9.45.50-AM.png)
