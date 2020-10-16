@@ -58,15 +58,15 @@ There are some variations on the add command that are worth noting.
 ![clean status](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-15-at-6.01.23-PM.png)
 
 7. Add a joke to the file by executing `echo "Why don't eggs tell jokes? They'd crack each other up." > food-jokes.txt`.
-        - This will add the joke to the text file, using bash commands.
+    - This will add the joke to the text file, using bash commands.
 
 8. We can look at the contents of the file by executing `cat food-jokes.txt`.
-        - Once again, nothing to do with git. This is just s simple way to look at the file from the command line without opening it in a text editor.
+    - Once again, nothing to do with git. This is just s simple way to look at the file from the command line without opening it in a text editor.
 
 9. Check the status again by executing `git status`.
-        - You will see a status message for the repository indicating that the file **food-jokes.txt** is a _modified_ file.
+    - You will see a status message for the repository indicating that the file **food-jokes.txt** is a _modified_ file.
 
 10. Stage and commit the changes using a single command by executing `git commit -am "adding a egg joke to food-jokes"`.
-        - This approach is a nice shortcut. Use it in cases where you want to commit _**a**ll_ changes and supply the commit _**m**essage_ in one command.
+    - This approach is a nice shortcut. Use it in cases where you want to commit _**a**ll_ changes and supply the commit _**m**essage_ in one command.
         
 ![Commit changes](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-5.52.36-AM.png)
