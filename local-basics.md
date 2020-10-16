@@ -5,6 +5,7 @@ Using git, a set of changes to a set of files is maintained in a *repository*.
 - [Creating your first repository](#creating-your-first-repository)
 - [Commit your first file to the repository](#commit-your-first-file-to-the-repository)
 - [Commit your first edits to the repository](#commit-your-first-edits-to-the-repository)
+- [Understanding branches in the repository](#understanding-branches-in-the-repository)
 - [Create your first branch in the repository](#create-your-first-branch-in-the-repository)
 
 ## Creating your first repository
@@ -79,13 +80,13 @@ There are some variations on the add command that are worth noting.
 ![Commit changes](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/Screen-Shot-2020-10-16-at-5.52.36-AM.png)
 
 
-## Create your first branch in the repository
+## Understanding branches in the repository
 
 Before we jump into creating branches, let's step back and discuss what a branch is and why you might want to use one. Imagine if you will, that the commits you have made so far into the repository as a liniar set of of changes through time.
 
 ![Commits](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/main.png)
 
-We call this the **main** branch. Think of a branch as a tag that is added to a specific commit in the liniar set if changes.
+We call this the **main** branch. Think of a branch as a tag that is added to a specific commit in the liniar set of changes.
 
 ![Main Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/main-tag.png)
 
@@ -94,3 +95,33 @@ We call this the **main** branch. Think of a branch as a tag that is added to a 
 To handle this in git, we create a new branch to perform the work of creating the new joke. Creating a branch simply adds a new tag to the set of commits.
 
 ![New Joke Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/new-joke-branch.png)
+
+We can now commit new changes to the new-joke branch.
+
+![New Joke Butter](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/new-joke-butter.png)
+
+Notice that the butter joke commit simply continues the liniar set of changes but the **new-joke** branch points to the _butter joke commit_ and the **main** branch points at the _egg joke commit_.
+
+Once we are satisfied with the butter joke, we can **merge** the _new-joke branch_ into the _main branch_.
+
+![Merge New Joke to Main](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/merge-new-joke-to-main.png)
+
+Notice here the _main branch_ tag is moved forward in the linear set of changes to the same place as the _new-joke branch_.
+
+**Question:** Why are they called branches instead of tags or pointers?
+
+**Consider this scenario:** While working on the butter joke in the _new-joke branch_, a bug report comes in saying there is a fatal flaw in the egg joke.
+
+Using git, you can switch to the _main branch_ and correct the problem by adding a commit fixing it to the _main branch_.
+
+![New Commit to Main Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/new-commit-main-branch.png)
+
+Here we have introduced a divergence in the liniar set of changes. This divergence consists of two commits with a common ancestor commit. And our branches point to the head of each divergent commit.
+
+Now when we merge the _new-joke branch_ into the _main branch_, we reorder the commits to the new _main branch_ tag.
+
+![Rebase Merge](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/rebase-merge.png)
+
+This is commonly refered to as a rebase merge. We took the set of changes from the _new-joke branch_ and applied them to the end of the set of changes in the _main branch_. Making it appear in the linear set of changes in the main branch as a new commit. Now both branch tags are pointing to the same commit. We no longer need the _new-joke branch_ and can delete it.
+
+![Delete Branch](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/delete-new-joke-branch.png)
