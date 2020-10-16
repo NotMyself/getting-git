@@ -84,9 +84,7 @@ There are some variations on the add command that are worth noting.
 
 Before we jump into creating branches, let's step back and discuss what a branch is and why you might want to use one. Imagine if you will, that the commits you have made so far into the repository as a liniar set of of changes through time.
 
-![Commits](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/
-
-.png)
+![Commits](https://s3-us-west-1.amazonaws.com/iamnotmyself-com/2020/10/main.png)
 
 We call this the **master** branch. Think of a branch as a tag that is added to a specific commit in the liniar set of changes.
 
