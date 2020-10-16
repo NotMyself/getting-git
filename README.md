@@ -2,6 +2,8 @@
 
 Using the git cli can be intimidating at times. It is not uncommon for beginners to get bewildered. It is also not uncommon for beginners to attempt to use a graphical application to attempt to simplify the complexity. Many of these applications assume an understanding of git upfront and use common concepts and language from the cli. This can also be a huge source of confusion as well but now you are one step removed from what is going on!
 
+Another aspect of learning git that can be intimidating is the volumes of information on the internet about git. Most engineers who create tutorials about git want to get into how git works under the hood. Usually within the first four paragraphs you find the phrase **directed acyclick graph**. And that is where a lot of people check out instead of `git commit`ing.
+
 A better approach is to learn the basics of the cli and get comfortable using it for normal day to day tasks. You can then fallback to apps when a task becomes a burden from the command line. Common tasks like commiting changes, creating branches, obtaining changes from others and merging are a snap on the command line but resolving merge conflicts can be painful and visual apps can make it much easier to accomplish.
 
 ## What is Git?
